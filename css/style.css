@@ -59,7 +59,7 @@ body {
   flex-wrap: wrap;
   width: 100%;
   background-color: #c1c1c1;
-  transition: 0.5s;
+  transition: all 0.5s;
 }
 
 .menu-navbar.sticky {
@@ -72,7 +72,7 @@ body {
   align-items: center;
 }
 .menu-navbar.sticky .nav-movie-logo img {
-  width: 250px;
+  width: 300px;
 }
 
 .nav-menu {
@@ -135,13 +135,32 @@ body {
     top: -300px;
     left: 0;
     transition: all 0.5s ease-in-out;
+    position: fixed;
   }
 
   .menu-navbar.active {
     top: 50px;
   }
 
+  .menu-navbar.sticky {
+    align-items: start;
+    top: -300px;
+  }
+
+  .menu-navbar.sticky.active {
+    top: 50px;
+  }
+
+  .menu-navbar.sticky .nav-menu ul {
+    align-items: normal;
+  }
+  .menu-navbar.sticky .nav-menu ul li {
+    align-items: normal;
+  }
+
   .header-navbar {
+    width: 100%;
+    position: fixed;
     z-index: 99;
     padding: 0 0;
     justify-content: space-between;
@@ -161,6 +180,7 @@ body {
 
   .nav-menu {
     padding: 0 0;
+    width: 100%;
   }
 
   .nav-menu ul {
@@ -172,6 +192,10 @@ body {
   .nav-menu ul li {
     padding: 15px 10px;
     transition: all 0.6s;
+    width: 100%;
+  }
+  .menu-navbar.active.sticky .nav-menu ul {
+    width: 100%;
   }
 
   .nav-menu ul li:hover {
@@ -187,6 +211,11 @@ body {
 
   .menu-navbar hr {
     height: 0;
+    width: 100%;
+  }
+
+  .menu-navbar.active.sticky .nav-movie-logo .movie-image img {
+    width: 300px;
   }
 
   /* End Nav Responsive */
