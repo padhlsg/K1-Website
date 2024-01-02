@@ -12,6 +12,11 @@ body {
 
 /* Navbar */
 
+.navbar {
+  z-index: 999;
+  width: 100%;
+}
+
 .header-navbar {
   background-color: #690d00;
   min-height: 50px;
@@ -19,7 +24,8 @@ body {
   justify-content: space-between;
   padding: 0 80px;
   align-items: center;
-  position: sticky;
+  position: relative;
+  z-index: -99;
 }
 
 .toggle-button {
@@ -60,19 +66,7 @@ body {
   width: 100%;
   background-color: #c1c1c1;
   transition: all 0.5s;
-}
-
-.menu-navbar.sticky {
-  position: fixed;
-  top: 0;
-  min-height: 65px;
-  align-items: center;
-}
-.menu-navbar.sticky .nav-menu ul {
-  align-items: center;
-}
-.menu-navbar.sticky .nav-movie-logo img {
-  width: 300px;
+  transition: 0.5s;
 }
 
 .nav-menu {
@@ -120,7 +114,35 @@ body {
   width: 300px;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.sticky + #home {
+  padding-top: 150px;
+}
+
 /* End Navbar */
+
+/* Hero */
+
+#home {
+  padding-top: 18rem;
+}
+
+.container-home {
+  width: 90%;
+  margin: auto;
+}
+
+.video-home iframe {
+  border: 1;
+}
+
+/* End Hero */
 
 /* Responsive */
 @media screen and (max-width: 600px) {
@@ -135,7 +157,7 @@ body {
     top: -300px;
     left: 0;
     transition: all 0.5s ease-in-out;
-    position: fixed;
+    position: relative;
   }
 
   .menu-navbar.active {

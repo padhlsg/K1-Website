@@ -8,7 +8,17 @@ toggleButton.addEventListener("click", () => {
 // Enc Toggle button
 
 // Fixed Navbar
-window.addEventListener("scroll", function () {
-  let navbar = document.querySelector(".menu-navbar");
-  navbar.classList.toggle("sticky", window.scrollY > 50);
-});
+window.onscroll = function () {
+  myFunction();
+};
+
+var navbar = document.getElementById("navMenu");
+
+function myFunction() {
+  if (window.scrollY > 50) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+// End Fixed Navbar
