@@ -59,10 +59,9 @@ body {
   width: 100%;
   background-color: #c1c1c1;
   transition: all 0.5s;
+  overflow: hidden;
   position: sticky;
   top: 0;
-  overflow: hidden;
-  transition: 0.5s;
 }
 
 .nav-menu {
@@ -110,30 +109,20 @@ body {
   width: 300px;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  margin-top: 0;
-}
-
-.sticky + #home {
-  padding-top: 300px;
-}
-
 /* End Navbar */
 
-/* Hero */
+/* Home */
+
+#home {
+  padding-top: 6rem;
+}
 
 .container-home {
   width: 90%;
   margin: auto;
 }
 
-.video-home iframe {
-  border: 1;
-}
-
-/* End Hero */
+/* End Home */
 
 /* Responsive */
 @media screen and (max-width: 600px) {

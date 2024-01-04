@@ -7,22 +7,6 @@ toggleButton.addEventListener("click", () => {
 
 // Enc Toggle button
 
-// Fixed Navbar
-window.onscroll = function () {
-  myFunction();
-};
+// Navbar Fixed
 
-var navbar = document.getElementById("navMenu");
-var sticky = navbar.offsetTop;
-var homeSection = document.getElementById("home");
-
-function myFunction() {
-  if (window.scrollY >= sticky) {
-    navbar.classList.add("sticky");
-    homeSection.style.paddingTop = "100px";
-  } else {
-    navbar.classList.remove("sticky");
-    homeSection.style.paddingTop = "0";
-  }
-}
-// End Fixed Navbar
+// End Navbar Fixed
