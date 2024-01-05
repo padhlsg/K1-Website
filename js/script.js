@@ -7,6 +7,6 @@ toggleButton.addEventListener("click", () => {
 
 // Enc Toggle button
 
-// Navbar Fixed
+// Slider Carousel -Home
 
-// End Navbar Fixed
+// End Slider Carousel -Home
