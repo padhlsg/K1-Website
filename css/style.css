@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /* Firefox */
@@ -19,39 +20,23 @@
   width: 10px;
 }
 *::-webkit-scrollbar-track {
-  background: #c07f01;
+  background: #54bd98;
 }
 
 *::-webkit-scrollbar-thumb {
   border-radius: 11px;
-  background-color: #690d00;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background-color: #690d00;
-}
-
-*::-webkit-scrollbar-thumb:active {
-  background-color: #bd1700;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Flamenco:wght@300;400&family=Montserrat:wght@200;400;500;700;900&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
-  box-sizing: border-box;
+  background-color: #092635;
 }
 
 body {
   min-height: 1500px;
-  background-color: #ffce6d;
+  background-color: #092635;
 }
 
 /* Navbar */
 
 .header-navbar {
-  background-color: #690d00;
+  background-color: #092635;
   min-height: 50px;
   display: flex;
   justify-content: space-between;
@@ -74,7 +59,7 @@ body {
 .nav-logo p {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
-  color: #c07f01;
+  color: #9ec8b9;
   font-size: 40px;
 }
 
@@ -86,7 +71,7 @@ body {
 
 .nav-quote p {
   font-size: 17px;
-  color: #c07f01;
+  color: #9ec8b9;
   text-align: center;
   font-family: "Flamenco", sans-serif;
 }
@@ -96,7 +81,7 @@ body {
   height: 100px;
   flex-wrap: wrap;
   width: 100%;
-  background-color: #c1c1c1;
+  background-color: #9ec8b9;
   transition: all 0.5s;
   overflow: hidden;
   position: sticky;
@@ -126,13 +111,26 @@ body {
   font-size: 17px;
   text-decoration: none;
   color: #010101;
+  transition: all 0.5s;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+
+.nav-menu ul li a:hover {
+  background-color: #010101;
+  color: #f1f1f1;
 }
 
 .nav-menu ul li a span i {
-  color: #c91700;
+  color: #092635;
   display: flex;
   font-size: 18px;
   justify-content: center;
+  transition: all 0.5s;
+}
+
+.nav-menu ul li a:hover span i {
+  color: #9ec8b9;
 }
 .menu-navbar hr {
   border: #010101 1px solid;
@@ -154,16 +152,21 @@ body {
 /* Home */
 
 #home {
-  padding-top: 6rem;
   min-height: 450px;
 }
 
 .container-home {
-  width: 90%;
-  margin: auto;
   display: flex;
+  padding: 0 4rem;
+  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  background-image: url("../img/pexels-luis-quintero-2774556.jpg");
+  background-size: cover;
+  background-blend-mode: color-burn;
+  background-attachment: fixed;
+  background-color: #942d2dbb;
+  height: 480px;
 }
 
 /* animation -video-home */
@@ -175,10 +178,6 @@ body {
 
   50% {
     left: 50px;
-  }
-
-  75% {
-    left: 10px;
   }
 
   100% {
@@ -221,14 +220,15 @@ body {
 
 .title-home p {
   font-size: 100px;
+  color: #f1f1f1;
 }
 
 .title-home p span:nth-child(1) {
-  color: #690d00;
+  color: #ffffff;
 }
 
 .title-home p span:nth-child(2) {
-  color: #c07f01;
+  color: #9ec8b9;
 }
 
 .desk-home {
@@ -237,7 +237,7 @@ body {
 
 .desk-home p {
   font-size: 20px;
-  color: #5a5a5a;
+  color: #ffffff;
   font-style: italic;
 }
 
@@ -268,19 +268,17 @@ body {
   position: relative;
   transition: all 0.5s;
   bottom: 0;
-  background-color: black;
-}
-
-.movie-slide:hover {
-  bottom: 10px;
-  box-shadow: 0px 12px 8px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 0px 12px 8px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 12px 8px 0px rgba(0, 0, 0, 0.75);
 }
 
 .movie-slide iframe {
   width: 300px;
   height: 200px;
+  transition: all 0.3s;
+  border: 4px solid #54bd98;
+}
+
+.movie-slide iframe:hover {
+  transform: scale(1.1);
 }
 
 /* End Home */
