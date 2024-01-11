@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Flamenco:wght@300;400&family=Montserrat:wght@200;400;500;700;900&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Firefox */
 * {
   scrollbar-width: thin;
@@ -10,16 +19,7 @@
   width: 10px;
 }
 *::-webkit-scrollbar-track {
-  border-radius: 5px;
-  background-color: #dfe9eb;
-}
-
-*::-webkit-scrollbar-track:hover {
-  background-color: #b8c0c2;
-}
-
-*::-webkit-scrollbar-track:active {
-  background-color: #b8c0c2;
+  background: #c07f01;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -175,12 +175,10 @@ body {
 
   50% {
     left: 50px;
-    transform: rotate(5deg);
   }
 
   75% {
     left: 10px;
-    transform: rotate(-5deg);
   }
 
   100% {
