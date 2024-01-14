@@ -24,7 +24,6 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  border-radius: 11px;
   background-color: #092635;
 }
 
@@ -173,10 +172,11 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   background-image: url("../img/pexels-luis-quintero-2774556.jpg");
+  border-image: fill 0 linear-gradient(#0001, #050d28);
+  background-blend-mode: color;
+  background-color: #050d28d5;
   background-size: cover;
-  background-blend-mode: color-burn;
   background-attachment: fixed;
-  background-color: #942d2dbb;
   height: 480px;
 }
 
