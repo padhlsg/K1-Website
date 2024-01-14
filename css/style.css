@@ -30,13 +30,13 @@
 
 body {
   min-height: 1500px;
-  background-color: #092635;
+  background-color: #050d28;
 }
 
 /* Navbar */
 
 .header-navbar {
-  background-color: #092635;
+  background-color: #292f39;
   min-height: 50px;
   display: flex;
   justify-content: space-between;
@@ -54,12 +54,12 @@ body {
   width: 35px;
   height: 4px;
   margin: 3px 0;
-  background-color: #c07f01; /* Changed to a warm orange */
+  background-color: #fdffff; /* Changed to a warm orange */
 }
 .nav-logo p {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
-  color: #3498db; /* Changed to a vibrant blue */
+  color: #fdffff; /* Changed to a vibrant blue */
   font-size: 40px;
 }
 
@@ -71,17 +71,17 @@ body {
 
 .nav-quote p {
   font-size: 17px;
-  color: #3498db; /* Changed to a vibrant blue */
+  color: #fdffff; /* Changed to a vibrant blue */
   text-align: center;
   font-family: "Flamenco", sans-serif;
 }
 
 .menu-navbar {
   display: flex;
-  height: 100px;
+  height: 80px;
   flex-wrap: wrap;
   width: 100%;
-  background-color: #3498db; /* Changed to a vibrant blue */
+  background-color: #fdffff; /* Changed to a vibrant blue */
   transition: all 0.5s;
   overflow: hidden;
   position: sticky;
@@ -110,15 +110,10 @@ body {
   flex-direction: column;
   font-size: 17px;
   text-decoration: none;
-  color: #fff; /* Changed to white */
+  color: #292f39; /* Changed to white */
   transition: all 0.5s;
   padding: 10px 10px;
   border-radius: 10px;
-}
-
-.nav-menu ul li a:hover {
-  background-color: #fff; /* Changed to white */
-  color: #3498db; /* Changed to a vibrant blue */
 }
 
 .nav-menu ul li a span i {
@@ -129,8 +124,12 @@ body {
   transition: all 0.5s;
 }
 
-.nav-menu ul li a:hover span i {
-  color: #3498db; /* Changed to a vibrant blue */
+.nav-menu ul li:hover a span i {
+  color: #fdffff; /* Changed to a vibrant blue */
+}
+
+.nav-menu ul li:hover a {
+  color: #fdffff;
 }
 .menu-navbar hr {
   border: #fff 1px solid; /* Changed to white */
@@ -138,13 +137,25 @@ body {
   margin: auto 0;
 }
 
-.nav-movie-logo {
-  margin: auto;
-  transition: all 0.5s;
+.nav-search {
+  display: flex;
+  align-items: center;
 }
 
-.movie-image img {
+.nav-search input {
   width: 300px;
+  padding: 3px 10px;
+  border-radius: 0;
+  border: 2px solid black;
+}
+
+.nav-icons i {
+  position: relative;
+  left: 280px;
+}
+
+.nav-search input::-webkit-search-cancel-button {
+  display: none;
 }
 
 /* End Navbar */
@@ -152,7 +163,7 @@ body {
 /* Home */
 
 #home {
-  min-height: 450px;
+  min-height: 550px;
 }
 
 .container-home {
@@ -220,15 +231,11 @@ body {
 
 .title-home p {
   font-size: 100px;
-  color: #f1f1f1;
-}
-
-.title-home p span:nth-child(1) {
-  color: #ffffff;
+  color: #fdffff;
 }
 
 .title-home p span:nth-child(2) {
-  color: #3498db; /* Changed to a vibrant blue */
+  color: #292f39;
 }
 
 .desk-home {
@@ -280,7 +287,6 @@ body {
 .movie-slide iframe:hover {
   transform: scale(1.1);
 }
-
 /* End Home */
 
 /* Responsive */
@@ -289,14 +295,15 @@ body {
 
   .menu-navbar {
     display: flex;
-    flex-direction: column;
     position: absolute;
     width: 100%;
-    background-color: #3498db; /* Changed to a vibrant blue */
+    background-color: #fdffff; /* Changed to a vibrant blue */
     top: -300px;
+    position: fixed;
+    height: 300px;
+    z-index: 80;
     left: 0;
     transition: all 0.5s ease-in-out;
-    position: fixed;
   }
 
   .menu-navbar.active {
@@ -306,17 +313,6 @@ body {
   .menu-navbar.sticky {
     align-items: start;
     top: -300px;
-  }
-
-  .menu-navbar.sticky.active {
-    top: 50px;
-  }
-
-  .menu-navbar.sticky .nav-menu ul {
-    align-items: normal;
-  }
-  .menu-navbar.sticky .nav-menu ul li {
-    align-items: normal;
   }
 
   .header-navbar {
@@ -355,24 +351,22 @@ body {
     transition: all 0.6s;
     width: 100%;
   }
+
+  .nav-menu ul li:hover {
+    background-color: #292f39;
+  }
   .menu-navbar.active.sticky .nav-menu ul {
     width: 100%;
   }
 
-  .nav-menu ul li:hover {
-    background-color: #3498db; /* Changed to a vibrant blue */
-  }
   .nav-menu ul li a {
     flex-direction: row;
+    color: #292f39;
   }
 
   .nav-menu ul li a span i {
     padding-right: 30px;
-  }
-
-  .menu-navbar hr {
-    height: 0;
-    width: 100%;
+    color: #292f39;
   }
 
   .menu-navbar.active.sticky .nav-movie-logo .movie-image img {
